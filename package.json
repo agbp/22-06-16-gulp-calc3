@@ -1,0 +1,17 @@
+{
+  "name": "22-06-16-gulp-calc3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfie.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrey.L.Golovin@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^6.1.1",
+    "gulp": "^4.0.2",
+    "gulp-file-include": "^2.3.0"
+  }
+}
