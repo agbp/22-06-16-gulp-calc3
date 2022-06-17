@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('html/head.html',{
-    "title": "Home",
-})
-<body>
-@@include('html/header.html',{})        
-<main>
-    <img src="./img/test.png">
-</main>
-@@include('html/footer.html',{})        
-</body>
+    @@include('html/head.html',{
+        "title": "Home",
+    })
+    <body>
+        @@include('html/header.html',{})        
+        <main>
+            <img src="@img/test.png">
+            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, soluta. Dolor, praesentium incidunt corrupti fugit nobis magni voluptatibus laboriosam voluptate accusantium eligendi repudiandae debitis aperiam a hic nesciunt. Et, enim!</span>
+        </main>
+        @@include('html/footer.html',{})        
+        <script src="js/app.min.js"></script>
+    </body>
 </html>

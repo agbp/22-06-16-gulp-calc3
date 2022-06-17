@@ -1,0 +1,21 @@
+
+body {
+    background-color: gray;
+    span {
+        color: blue;
+    }
+    background: url("@img/test.png") 0 0 no-repeat;
+}
+
+@media (max-width: 768px) {
+    span {
+        font-size: 20px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    body {
+        background-color:aquamarine;
+    }
+}
