@@ -1,4 +1,5 @@
 
+import { app } from "../../gulpfile.js";
 import fileinclude from "gulp-file-include";
 import webpHtmlNoSvg from 'gulp-webp-html-nosvg';
 import versionNumber from 'gulp-version-number';

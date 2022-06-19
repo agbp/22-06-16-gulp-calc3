@@ -1,4 +1,6 @@
 
+import { app } from "../../gulpfile.js";
+
 export const server = (done) => {
     app.plugins.browserSync.init({
         server: {

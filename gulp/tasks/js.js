@@ -1,4 +1,5 @@
 
+import { app } from '../../gulpfile.js';
 import webpack from 'webpack-stream';
 
 export const js = () => {
