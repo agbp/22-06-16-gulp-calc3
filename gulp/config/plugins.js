@@ -4,6 +4,7 @@ import notify from 'gulp-notify';
 import browserSync from 'browser-sync';
 import rename from 'gulp-rename';
 import newer from "gulp-newer";
+import gulpIf from 'gulp-if';
 
 export const plugins = {
     replace: replace,
@@ -12,4 +13,5 @@ export const plugins = {
     browserSync: browserSync,
     rename: rename,
     newer: newer,
+    if: gulpIf,
 }
