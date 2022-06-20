@@ -12,7 +12,7 @@ export const otfToTtf = () => {
             })
         ))
         .pipe(fonter({ formats: ['ttf'] }))
-        .pipe(app.gulp.dist(`${app.path.srcFolder}/fonts/`))
+        .pipe(app.gulp.dest(`${app.path.srcFolder}/fonts/`))
 }
 
 export const ttfToWoff = () => {
@@ -31,13 +31,13 @@ export const ttfToWoff = () => {
 }
 
 export const fontsStyle = () => {
-    let fontsFile = `${app.path.src.scss}/fonts.scss`;
+    let fontsFile = `${app.path.srcFolder}/scss/fonts.scss`;
     fs.readdir(app.path.build.fonts,function (err,fontFiles) {
         if(fontFiles) {
             if(!fs.existsSync(fontsFile)) {
                 fs.writeFile(fontsFile,'',cb)
                 let newFileOnly;
-                for (let i = 0; i < fontsfiles.length; i++) {
+                for (let i = 0; i < fontFiles.length; i++) {
                     let fontFileName = fontFiles[i].split('.')[0];
                     if (newFileOnly !== fontFileName) {
                         let fontName = fontFileName.split('-')[0] ?? fontFileName;
@@ -78,12 +78,12 @@ export const fontsStyle = () => {
                                 break;
                         }
                         fs.appendFile(fontsFile,
-                            `@font-dace {\n\tfont-family: ${fontName};\n\tfont-display:swap;\n\tsrc: url(../fonts/${fontFileName}.woff2) format("woff2"), url(../fonts/${fontFileName}.woff)\n\tformat("woff");\n\tfont-eweight: ${fontWeight};\n\tfont-style: normal;\n}\r\n`,cb);
+                            `@font-face {\n\tfont-family: ${fontName};\n\tfont-display:swap;\n\tsrc: url(../fonts/${fontFileName}.woff2) format("woff2"), url(../fonts/${fontFileName}.woff) format("woff");\n\tfont-weight: ${fontWeight};\n\tfont-style: normal;\n}\r\n`,cb);
                         newFileOnly = fontFileName;
                     }
                 }
             } else {
-                console.log("Файл scss/fonts.scss уже существует, для обновления файду нужно его удалить!");
+                console.log("Файл scss/fonts.scss уже существует, для обновления нужно его удалить!");
             }
         }
     })
