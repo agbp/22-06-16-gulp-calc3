@@ -7,11 +7,11 @@ import newer from "gulp-newer";
 import gulpIf from 'gulp-if';
 
 export const plugins = {
-    replace: replace,
-    plumber: plumber,
-    notify: notify,
-    browserSync: browserSync,
-    rename: rename,
-    newer: newer,
-    if: gulpIf,
+	replace: replace,
+	plumber: plumber,
+	notify: notify,
+	browserSync: browserSync,
+	rename: rename,
+	newer: newer,
+	if: gulpIf,
 }

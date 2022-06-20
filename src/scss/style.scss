@@ -1,24 +1,26 @@
 @import 'fonts';
 
 body {
-    background-color: gray;
-    font-family: CaviarDreams;
-    span {
-        color: blue;
-    }
-    font-size: 60px;
-    background: url("@img/test.png") 0 0 no-repeat;
+	background-color: gray;
+	font-family: CaviarDreams;
+
+	span {
+		color: blue;
+	}
+
+	font-size: 60px;
+	background: url("@img/test.png") 0 0 no-repeat;
 }
 
 @media (max-width: 768px) {
-    span {
-        font-size: 40px;
-    }
+	span {
+		font-size: 40px;
+	}
 }
 
 
 @media (max-width: 768px) {
-    body {
-        background-color:aquamarine;
-    }
+	body {
+		background-color: aquamarine;
+	}
 }
