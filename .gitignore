@@ -14,7 +14,6 @@
 /dist
 
 # misc
-/gulp
 .DS_Store
 .env
 .env.local
