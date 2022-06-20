@@ -14,7 +14,7 @@
 /dist
 
 # misc
-/gulp/config/ftp.js
+/gulp
 .DS_Store
 .env
 .env.local
