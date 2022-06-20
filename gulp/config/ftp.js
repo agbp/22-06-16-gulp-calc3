@@ -1,6 +1,6 @@
 
 export const configFtp = {
-    host: '31.31.196.48',
+    host: 'some-host',
     user: '',
     password: '',
     parallel: 5,
