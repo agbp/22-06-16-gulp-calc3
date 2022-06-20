@@ -12,6 +12,7 @@
 # production
 /prod
 /dist
+/*.zip
 
 # misc
 /gulp/config/ftp.js
