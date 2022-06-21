@@ -44,3 +44,4 @@ const deployFtp = gulp.series(reset, mainTasks, ftp);
 export { dev, build, deployZip, deployFtp };
 
 gulp.task("default", dev);
+
