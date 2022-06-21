@@ -1,5 +1,5 @@
 import { app } from "../../gulpfile.js";
-import fs, { appendFile } from "fs";
+import fs from "fs";
 import fonter from "gulp-fonter";
 import ttf2woff2 from "gulp-ttf2woff2";
 
@@ -99,7 +99,5 @@ export const fontsStyle = () => {
 		}
 	});
 	return app.gulp.src(app.path.srcFolder);
-	function cb() {}
+	function cb() { }
 };
-
-export const fonts = () => {};
