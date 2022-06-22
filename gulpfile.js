@@ -1,7 +1,4 @@
 /* eslint-disable import/no-cycle */
-import gulp from 'gulp';
-import path from './gulp/config/path.js';
-import plugins from './gulp/config/plugins.js';
 import copy from './gulp/tasks/copy.js';
 import reset from './gulp/tasks/reset.js';
 import html from './gulp/tasks/html.js';
@@ -13,38 +10,30 @@ import { otfToTtf, ttfToWoff, fontsStyle } from './gulp/tasks/fonts.js';
 import svgSprite from './gulp/tasks/svgSprite.js';
 import zip from './gulp/tasks/zip.js';
 import ftp from './gulp/tasks/ftp.js';
-
-const app = {
-	isBuild: process.argv.includes('--build'),
-	path,
-	gulp,
-	plugins,
-};
+import app from './gulp/gulpApp.js';
 
 function watcher() {
-	gulp.watch(app.path.watch.files, copy);
-	gulp.watch(app.path.watch.html, html);
-	gulp.watch(app.path.watch.scss, scss);
-	gulp.watch(app.path.watch.js, js);
-	gulp.watch(app.path.watch.images, images);
+	app.gulp.watch(app.path.watch.files, copy);
+	app.gulp.watch(app.path.watch.html, html);
+	app.gulp.watch(app.path.watch.scss, scss);
+	app.gulp.watch(app.path.watch.js, js);
+	app.gulp.watch(app.path.watch.images, images);
 }
 
-const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
+const fonts = app.gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
-const mainTasks = gulp.series(
+const mainTasks = app.gulp.series(
 	fonts,
-	gulp.parallel(copy, html, scss, js, images, svgSprite),
+	app.gulp.parallel(copy, html, scss, js, images, svgSprite),
 );
 
-const dev = gulp.series(reset, mainTasks, gulp.parallel(server, watcher));
-const build = gulp.series(reset, mainTasks);
-const deployZip = gulp.series(reset, mainTasks, zip);
-const deployFtp = gulp.series(reset, mainTasks, ftp);
+const dev = app.gulp.series(reset, mainTasks, app.gulp.parallel(server, watcher));
+const build = app.gulp.series(reset, mainTasks);
+const deployZip = app.gulp.series(reset, mainTasks, zip);
+const deployFtp = app.gulp.series(reset, mainTasks, ftp);
 
 export {
 	dev, build, deployZip, deployFtp,
 };
 
-gulp.task('default', dev);
-
-export default app;
+app.gulp.task('default', dev);

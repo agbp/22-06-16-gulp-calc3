@@ -2,7 +2,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import del from 'del';
 import gulpZip from 'gulp-zip';
-import app from '../../gulpfile.js';
+import app from '../gulpApp.js';
 
 const zip = () => {
 	del(`./${app.path.rootFolder}.zip`);

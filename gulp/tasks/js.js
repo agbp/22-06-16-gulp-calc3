@@ -1,7 +1,7 @@
 /* eslint-disable import/no-cycle */
 /* eslint-disable import/no-extraneous-dependencies */
 import webpack from 'webpack-stream';
-import app from '../../gulpfile.js';
+import app from '../gulpApp.js';
 
 const js = () => app.gulp
 	.src(app.path.src.js, { sourcemaps: !app.isBuild })

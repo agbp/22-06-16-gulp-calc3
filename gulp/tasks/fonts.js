@@ -3,7 +3,7 @@
 import fs from 'fs';
 import fonter from 'gulp-fonter';
 import ttf2woff2 from 'gulp-ttf2woff2';
-import app from '../../gulpfile.js';
+import app from '../gulpApp.js';
 
 export const otfToTtf = () => app.gulp
 	.src(`${app.path.srcFolder}/fonts/*.otf`, {})

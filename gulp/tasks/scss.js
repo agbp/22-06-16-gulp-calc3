@@ -6,7 +6,7 @@ import cleanCss from 'gulp-clean-css';
 import webpCss from 'gulp-webpcss';
 import autoprefixer from 'gulp-autoprefixer';
 import groupCssMediaQueries from 'gulp-group-css-media-queries';
-import app from '../../gulpfile.js';
+import app from '../gulpApp.js';
 
 const sass = gulpSass(dartSass);
 

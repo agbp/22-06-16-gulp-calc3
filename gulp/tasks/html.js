@@ -3,7 +3,7 @@
 import fileinclude from 'gulp-file-include';
 import webpHtmlNoSvg from 'gulp-webp-html-nosvg';
 import versionNumber from 'gulp-version-number';
-import app from '../../gulpfile.js';
+import app from '../gulpApp.js';
 
 const html = () => app.gulp
 	.src(app.path.src.html)

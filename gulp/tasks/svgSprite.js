@@ -1,7 +1,7 @@
 /* eslint-disable import/no-cycle */
 /* eslint-disable import/no-extraneous-dependencies */
 import gulpSvgSprite from 'gulp-svg-sprite';
-import app from '../../gulpfile.js';
+import app from '../gulpApp.js';
 
 const svgSprite = () => app.gulp
 	.src(app.path.src.svgIcons)

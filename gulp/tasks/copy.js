@@ -1,5 +1,5 @@
 /* eslint-disable import/no-cycle */
-import app from '../../gulpfile.js';
+import app from '../gulpApp.js';
 
 const copy = () => app.gulp
 	.src(app.path.src.files)

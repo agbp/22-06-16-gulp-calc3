@@ -3,7 +3,7 @@
 import vinylFtp from 'vinyl-ftp';
 import util from 'gulp-util';
 import configFtp from '../config/ftp.js';
-import app from '../../gulpfile.js';
+import app from '../gulpApp.js';
 
 const ftp = () => {
 	configFtp.log = util.log;

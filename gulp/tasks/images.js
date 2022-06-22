@@ -2,7 +2,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import webp from 'gulp-webp';
 import imagemin from 'gulp-imagemin';
-import app from '../../gulpfile.js';
+import app from '../gulpApp.js';
 
 const images = () => app.gulp
 	.src(app.path.src.images)
