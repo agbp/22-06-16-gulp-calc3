@@ -1,5 +1,8 @@
-import { app } from "../../gulpfile.js";
-import del from "del";
-export const reset = () => {
-	return del(app.path.clean);
-};
+/* eslint-disable import/no-cycle */
+/* eslint-disable import/no-extraneous-dependencies */
+import del from 'del';
+import app from '../../gulpfile.js';
+
+const reset = () => del(app.path.clean);
+
+export default reset;

@@ -10,7 +10,9 @@
 		"dev": "gulp",
 		"build": "gulp build --build",
 		"zip": "gulp deployZip --build",
-		"ftp": "gulp deployFtp --build"
+		"ftp": "gulp deployFtp --build",
+		"lint": "eslint . --cache",
+		"fix": "eslint . --fix"
 	},
 	"author": "Andrey.L.Golovin@gmail.com",
 	"license": "ISC",
@@ -20,6 +22,8 @@
 		"browser-sync": "^2.27.10",
 		"del": "^6.1.1",
 		"eslint": "^8.18.0",
+		"eslint-config-airbnb-base": "^15.0.0",
+		"eslint-plugin-import": "^2.26.0",
 		"eslint-plugin-react": "^7.30.0",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^8.0.0",

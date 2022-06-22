@@ -1,17 +1,20 @@
-import replace from "gulp-replace";
+/* eslint-disable import/no-extraneous-dependencies */
+import replace from 'gulp-replace';
 import plumber from 'gulp-plumber';
 import notify from 'gulp-notify';
 import browserSync from 'browser-sync';
 import rename from 'gulp-rename';
-import newer from "gulp-newer";
+import newer from 'gulp-newer';
 import gulpIf from 'gulp-if';
 
-export const plugins = {
-	replace: replace,
-	plumber: plumber,
-	notify: notify,
-	browserSync: browserSync,
-	rename: rename,
-	newer: newer,
+const plugins = {
+	replace,
+	plumber,
+	notify,
+	browserSync,
+	rename,
+	newer,
 	if: gulpIf,
-}
+};
+
+export default plugins;
